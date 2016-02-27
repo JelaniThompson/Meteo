@@ -22,11 +22,14 @@ $(function() {
         $.getJSON(coordinates, function(json) {
           $("#output").html(JSON.stringify(json));
           console.log("Latitude: " + latitude + "Longitude: " + longitude);
+
+          //Output API data (should eventually evolve into outputting user's location and weather)
+          let cityName = json.name;
+          let weather = json.weather[0].main;
+          console.log("The weather in " + cityName + " is " + weather);
+
         });
       });
-
-      //Output API data (should eventually evolve into outputting user's location and weather)
-
     });
   }
 });
