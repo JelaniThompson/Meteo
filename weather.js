@@ -26,7 +26,7 @@ $(function() {
       });
 
       //Output API data (should eventually evolve into outputting user's location and weather)
-      
+
     });
   }
 });
