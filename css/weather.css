@@ -1,0 +1,24 @@
+html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2781BC;
+  color: #FCFCFC;
+  font-family: "ff-nuvo-web-pro", sans-serif;
+  font-style: normal;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+#weatherDisplay {
+  display: flex;
+  font-size: 1.5em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#weather {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
