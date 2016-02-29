@@ -1,12 +1,32 @@
 <html>
 
 <head>
+  <!--Loading Adobe Typekit Fonts-->
+<script src="https://use.typekit.net/rzu4hbe.js"></script>
+<script>
+  try {
+    Typekit.load({
+      async: true
+    });
+  } catch (e) {}
+</script>
 </head>
 
+<div id="title">
+  <h1>Free Code Camp Weather App</h1>
+</div>
+
+  <div id = "weatherDisplay">
+    <div id = "city"></div>
+    <div id = "weather"></div>
+    <div id = "temperature"></div>
+  </div>
+
 <body>
-    
+  <link rel="stylesheet" type="text/css" href="../css/weather.css">
   <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
   <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="../js/weather.js"></script>
 </body>
 
 </html>
