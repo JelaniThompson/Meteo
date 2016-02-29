@@ -10,6 +10,28 @@ html {
   font-weight: 900;
 }
 
+/*Declare a new font*/
+@font-face {
+   font-family: "iconvault";
+   src: url("../assets/iconvault_forecastfont.eot");
+   src: url("../assets/iconvault_forecastfont.eot?#iefix") format("embedded-opentype"),
+        url("../assets/iconvault_forecastfont.woff") format("woff"),
+        url("../assets/iconvault_forecastfont.ttf") format("truetype"),
+        url("../assets/iconvault_forecastfont.svg#iconvault") format("svg");
+   font-weight: normal;
+   font-style: normal;
+ }
+
+ /* -----Sun----- */
+
+	.icon-sun::after {
+	content: "\f113";
+	color: rgb(255, 165, 0);
+	position: absolute;
+
+	}
+
+
 #weatherDisplay {
   display: flex;
   font-size: 1.5em;

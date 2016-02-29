@@ -3,6 +3,10 @@
 
 const Brampton = "http://api.openweathermap.org/data/2.5/weather?lat=43.72349010000001&lon=-79.714882&appid=d92242a2a0f022fbdfc75b0c9499bbec";
 
+let $city = $("#city");
+let $weather = $("#weather");
+let $temperature = $("#temperature");
+
 //Output data from URL via JSON
 //Wrap in function so it calls when DOM elements are ready
 $(function() {
@@ -26,6 +30,10 @@ $(function() {
         let temperature = Math.round(json.main.temp);
         console.log("The weather in " + cityName + " is " + weather + " and the temperature is " + temperature + " °C");
 
+        //Output values in HTML
+        $city.html(cityName);
+        $weather.html(weather);
+        $temperature.html(temperature + " °C");
       });
     });
   }
