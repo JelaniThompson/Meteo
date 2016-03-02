@@ -3,6 +3,7 @@
 
 const Brampton = "http://api.openweathermap.org/data/2.5/weather?lat=43.72349010000001&lon=-79.714882&appid=d92242a2a0f022fbdfc75b0c9499bbec";
 
+//Add elements from DOM
 let $city = $("#city");
 let $weather = $("#weather");
 let $temperature = $("#temperature");
@@ -85,5 +86,7 @@ let weatherIDs = [
     rangeMax: 804
   }
 ];
+
+//Determine what name to pick by matching IDs
 
 //If ID matches range, match weather group
