@@ -21,7 +21,7 @@ $(function() {
 
       //Output data from URL via JSON
       $.getJSON(coordinates, function(json) {
-        //$("#output").html(JSON.stringify(json));
+        console.log((JSON.stringify(json)));
         console.log("Latitude: " + latitude + " Longitude: " + longitude);
 
         //Output API data (should eventually evolve into outputting user's location and weather)
@@ -32,12 +32,58 @@ $(function() {
 
         //Output values in HTML
         $city.html(cityName);
+        //Change to be description
         $weather.html(weather);
         $temperature.html(temperature + " °C");
+
       });
     });
   }
 });
 
-//Have an array of different potential weathers
-let weather = [];
+//Different weather IDs from weather API
+let weatherIDs = [
+  //Thunderstorm group, etc.
+  {
+    name: "thunderstorm",
+    icon: "wi wi-owm-200",
+    rangeMin: 200,
+    rangeMax: 232
+  },
+
+  {
+    name: "drizzle",
+    icon: "wi wi-owm-300",
+    rangeMin: 300,
+    rangeMax: 321
+  },
+
+  {
+    name: "rain",
+    icon: "wi wi-owm-501",
+    rangeMin: 500,
+    rangeMax: 531
+  },
+
+  {
+    name: "snow",
+    icon: "wi wi-owm-600",
+    rangeMin: 600,
+    rangeMax: 622
+  },
+
+  {
+    name: "clear",
+    icon: "wi wi-owm-800",
+    rangeMax: 800
+  },
+
+  {
+    name: "clouds",
+    icon: "wi wi-owm-801",
+    rangeMin: 801,
+    rangeMax: 804
+  }
+];
+
+//If ID matches range, match weather group
