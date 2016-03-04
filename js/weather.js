@@ -1,7 +1,7 @@
 //Do JSON APIs course on FCC tomorrow to figure out how to work with this
 'use strict';
 
-const Brampton = "http://api.openweathermap.org/data/2.5/weather?lat=43.72349010000001&lon=-79.714882&appid=d92242a2a0f022fbdfc75b0c9499bbec";
+//const Brampton = "http://api.openweathermap.org/data/2.5/weather?lat=43.72349010000001&lon=-79.714882&appid=d92242a2a0f022fbdfc75b0c9499bbec";
 
 let $city = $("#city");
 let $weather = $("#weather");
@@ -32,68 +32,24 @@ $(function() {
         console.log("The weather in " + cityName + " is " + weather + " and the temperature is " + temperature + " °C");
 
         //Output appropriate weather ID
-        for (var i = 0; i < weatherIDs.length; i++) {
-          if (weatherIDs[i].rangeMin || weatherIDs[i].rangeMax == json.weather[0].id) {
-            console.log("The weather ID is " + json.weather[0].id + " (" + weather + ")");
+        console.log("The weather ID is " + json.weather[0].id + " (" + weather + ")");
 
-            //Now put the appropriate weather icon for ID
-            $weatherIcon.html("<i class = " + "'" + weatherIDs[i].icon + "'" + "></i>");
-            console.log("<i class = " + "'" + weatherIDs[i].icon + "'" + "></i>");
-          }
-        }
+        //Now put the appropriate weather icon for ID
+        $weatherIcon.html("<i class=" + "'" + "wi wi-owm-" + json.weather[0].id + "'" + "></i>");
+        //console.log("<i class=" + "'" + "wi wi-owm-" +  json.weather[0].id + "'" + "></i>");
 
         //Output values in HTML
         $city.html(cityName);
         //Change to be description
         $weather.html(weather);
         $temperature.html(temperature + " °C");
-
       });
     });
   }
-});
 
-//Different weather IDs from weather API
-let weatherIDs = [
-  //Thunderstorm group, etc.
-  {
-    name: "thunderstorm",
-    icon: "wi wi-owm-200",
-    rangeMin: 200,
-    rangeMax: 232
-  },
+  //Convert Celsius to Fahrenheit (ternary operator maybe?)
+  function temperatureConversion() {
 
-  {
-    name: "drizzle",
-    icon: "wi wi-owm-300",
-    rangeMin: 300,
-    rangeMax: 321
-  },
-
-  {
-    name: "rain",
-    icon: "wi wi-owm-501",
-    rangeMin: 500,
-    rangeMax: 531
-  },
-
-  {
-    name: "snow",
-    icon: "wi wi-owm-600",
-    rangeMin: 600,
-    rangeMax: 622
-  },
-
-  {
-    name: "clear",
-    icon: "wi wi-owm-800",
-    rangeMax: 800
-  },
-
-  {
-    name: "clouds",
-    icon: "wi wi-owm-801",
-    rangeMin: 801,
-    rangeMax: 804
   }
-];
+
+});
