@@ -1,33 +1,64 @@
-<html>
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Meteo (Weather App)</title>
+      <!--Loading Adobe Typekit Fonts-->
+  <script src="https://use.typekit.net/rzu4hbe.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
 
-<head>
-  <meta charset="utf-8">
-  <!--Loading Adobe Typekit Fonts-->
-<script src="https://use.typekit.net/rzu4hbe.js"></script>
-<script>
-  try {
-    Typekit.load({
-      async: true
-    });
-  } catch (e) {}
-</script>
-</head>
+
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css'>
+
+        <link rel="stylesheet" href="css/weather.css">
+
+
+
+
+  </head>
+
+  <body>
+
+    <html>
+
 
 <div id="title">
   <h1>Free Code Camp Weather App</h1>
 </div>
 
-  <div id = "weatherDisplay">
-    <div id="city"></div>
-    <div id="weather"></div>
+<div id="weatherDisplay">
+  <!--Will display weather depending on data-->
+  <div id="weatherIcon"></div>
+  <div id="city"></div>
+  <div id="description"></div>
+
+  <div id="temperatureContainer">
     <div id="temperature"></div>
+    <!--Celsius will be active at first because default-->
+    <!--Have C &deg; and F &deg; be classes that are active/non-active-->
+    <div id="celsius" class="wi wi-celsius active"></div>
+    <div id = "fahrenheit" class="wi wi-fahrenheit inactive"></div>
   </div>
 
+</div>
+
 <body>
-  <link rel="stylesheet" type="text/css" href="../css/weather.css">
   <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
   <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="../js/weather.js" type="application/javascript;version=1.7"></script>
 </body>
 
+</html>
+
+        <script src="js/weather.js"></script>
+
+
+
+
+  </body>
 </html>

@@ -10,7 +10,43 @@ html {
   font-weight: 900;
 }
 
+
 /* Use http://erikflowers.github.io/weather-icons/ for weather icons */
+
+.wi {
+  font-size: 3em;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.active {
+  color: #FCFCFC;
+}
+
+.inactive {
+  color: #333;
+}
+
+#temperatureContainer {
+  display: flex;
+  align-items: middle;
+  flex-direction: row;
+}
+
+.wi-celsius {
+  padding: 0 12px 0 12px;
+}
+
+#temperature,
+.wi-celsius,
+.wi-fahrenheit {
+  font-size: 1.5em;
+}
+
+.wi-celsius,
+.wi-fahrenheit:hover {
+  cursor: pointer;
+}
 
 #weatherDisplay {
   display: flex;
@@ -20,7 +56,7 @@ html {
   flex-direction: column;
 }
 
-#weather {
+#description {
   padding-top: 12px;
   padding-bottom: 12px;
 }
